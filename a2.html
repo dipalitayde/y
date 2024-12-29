@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+
+    <body>
+        <input id="my" type="number" min="100" max="300" required>
+        <button onclick="myFunction()">click</button>
+        <em id="my1"></em>
+
+        <script>
+            function myFunction() {
+                var inpObj = document.getElementById("my");
+                if (!inpObj.checkValidity()) {
+                    document.getElementById("my1").innerHTML= inpObj.validationMessage;
+                }
+
+                else{
+                     document.getElementById("my1").innerHTML = "Input ok";
+                }
+            }
+        </script>
+    </body>
+</html>
